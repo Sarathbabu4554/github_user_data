@@ -1,0 +1,74 @@
+.container {
+  margin: 5px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+.img_app_main {
+  width: 3%;
+  height: 3%;
+}
+
+.flex_wrap {
+  display: flex;
+}
+
+.head_title {
+  font-size: 18px;
+  margin-top: 1%;
+}
+
+Button {
+  background-color: #228B22;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin: 0 2px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  text-align: center;
+}
+
+.box {
+  margin: 0 5.5px;
+}
+
+/* component.styles.css */
+.mat-snackbar-error {
+  background-color: #ff6f61;
+  /* Custom background color */
+  color: #fff;
+  /* Custom text color */
+}
+
+.container_loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:320px) {
+  .img_app_main {
+    width: 7%;
+    height: 3%;
+  }
+}
+
+
+@media screen and (min-width:321px) and (max-width:768px) {
+  .img_app_main {
+    width: 7%;
+    height: 3%;
+  }
+}

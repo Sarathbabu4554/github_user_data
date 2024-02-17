@@ -1,0 +1,36 @@
+
+.container_loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mat-snackbar-error {
+    background-color: #ff6f61; /* Custom background color */
+    color: #fff; /* Custom text color */
+  }
+
+  .container_main{
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  .mat-mdc-card-content:last-child{
+    margin-top: 20px !important;
+  }
+ 
+
+ @media screen and (min-width:769px){
+    .container_main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 60%;
+        width: 25%;
+        border-radius: 30px !important;
+        font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+        margin-top: 0 !important;
+      }
+  
+}

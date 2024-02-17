@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="flex_wrap">
+    <img class="img_app_main" src="/assets/pngwing.com (1).png">
+    <p class="head_title">GitHub Profile</p>
+  </div>
+</div>
+
+<div>
+  <mat-form-field class="box" appearance="outline">
+    <mat-label>Select GitHub User</mat-label>
+    <mat-select [formControl]="selectedOption" (selectionChange)="onSelectOpened($event)">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="flex_wrap">
+  <div>
+    <Button mat-button class="button-container"><mat-icon>perm_identity</mat-icon><a class="box"
+        routerLink="/user-profile" routerLinkActive="active" ariaCurrentWhenActive="page"
+        (click)="errorMsg()">UserProfile</a></Button>
+  </div>
+  <div>
+    <Button mat-button class="button-container"><mat-icon>book</mat-icon><a class="box" routerLink="/repository-list"
+        routerLinkActive="active" ariaCurrentWhenActive="page" (click)="errorMsg()">RepositoryList</a></Button>
+  </div>
+</div>
+
+
+
+
+<div *ngIf='isLoading' class="container_loader">
+  <mat-progress-spinner mode="indeterminate" color="primary" diameter="50"></mat-progress-spinner>
+</div>
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

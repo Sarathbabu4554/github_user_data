@@ -1,0 +1,27 @@
+<div *ngIf='isLoading' class="container_loader">
+  <mat-progress-spinner mode="indeterminate" color="primary" diameter="50"></mat-progress-spinner>
+</div>
+
+<div *ngIf="repositories" fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px">
+  <mat-card *ngFor="let repo of repositories;index as i" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)"
+    fxFlex.gt-md="0 1 calc(50%-10px)">
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>Repository name : {{ repositories[i].name || "null"}}</mat-card-title>
+      <mat-card-subtitle>Description : {{ repositories[i].description || "null" }}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image [src]="member.url" alt="Photo of {{member.title}}"> -->
+    <mat-card-content>
+      <div><span>Source : </span><a href="{{repositories[i].html_url}}">{{repositories[i].html_url}}</a></div>
+      <div *ngIf="repo.topics?.length > 0">Topics: {{ repositories[i].topics.join(', ') }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div *ngIf='!isLoading' class="flex_wrap">
+  <button mat-button *ngIf="currentPage > 1" (click)="onPageChange(currentPage - 1)"> Previous
+    <mat-icon>fast_rewind</mat-icon></button>
+  <button mat-button *ngIf="repositories.length > 0" (click)="onPageChange(currentPage + 1)">Next
+    <mat-icon>fast_forward</mat-icon></button>
+</div>

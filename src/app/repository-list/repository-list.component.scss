@@ -1,0 +1,33 @@
+mat-card {
+  margin-top: 20px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.flex_wrap {
+  width: 99%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.container_loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* component.styles.css */
+.mat-snackbar-error {
+  background-color: #ff6f61;
+  /* Custom background color */
+  color: #fff;
+  /* Custom text color */
+}
