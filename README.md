@@ -1,3 +1,13 @@
+# app-flow
+
+*  please select github user in select Box.
+*  click userpofile or repolist
+*  I have loaded ten 10 repo per page.
+*  In bottom you can see next and prev button for laoding next set of repo detail.
+*  I have handled error to show user
+*  If api not fetching error I have shown meassage to users.
+*  i have used material and flexlayout for responsive design.
+
 # GithubProfileViewer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
